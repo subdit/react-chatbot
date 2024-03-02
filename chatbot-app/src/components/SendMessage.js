@@ -2,25 +2,28 @@ import React, { useState } from 'react';
 import { auth, db } from '../firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
-const SendMessage = async event => {
+const SendMessage = ({ scroll }) => {
   const [message, setMessage] = useState('');
-  event.preventDefault();
-  if (message.trim() === '') {
-    alert('Enter valid message');
-    return;
-  }
-  const { uid, displayName, photoURL } = auth.currentUser;
-  await addDoc(collection(db, 'messages'), {
-    text: message,
-    name: displayName,
-    avatar: photoURL,
-    createAt: serverTimestamp(),
-    uid
-  });
-  setMessage();
+  const sendMessage = async event => {
+    event.preventDefault();
+    if (message.trim() === '') {
+      alert('Enter valid message');
+      return;
+    }
+    const { uid, displayName, photoURL } = auth.currentUser;
+    await addDoc(collection(db, 'messages'), {
+      text: message,
+      name: displayName,
+      avatar: photoURL,
+      createAt: serverTimestamp(),
+      uid
+    });
+    setMessage('');
+    scroll.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <form onSubmit={event => SendMessage(event)} className='send-message'>
+    <form onSubmit={event => sendMessage(event)} className='send-message'>
       <label htmlFor='messageInput' hidden>
         Enter Message
       </label>

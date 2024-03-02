@@ -10,7 +10,7 @@ const Welcome = () => {
   };
   return (
     <main className='welcome'>
-      <h2>Welcome to Chatbot App</h2>
+      <h2>Welcome to Chatbot </h2>
       <img src='/logo512.png' alt='ReactJs Logo' width={50} height={50} />
       <p>Sign In with Google to Chat with your fellow React Developers.</p>
       <button className='sign-in'>

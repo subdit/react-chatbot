@@ -9,6 +9,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase';
 import SendMessage from './SendMessage';
+import Message from './Message';
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
