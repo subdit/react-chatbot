@@ -1,14 +1,14 @@
 import React from 'react';
 import GoogleSignin from '../img/btn_google_signin_dark_pressed_web';
 import { auth } from '../firebase';
-import { userAuthState } from 'react-firebase-hooks';
-import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
+import { userAuthState } from 'react-firebase-hooks/auth';
+import { GithubAuthProvider, signInWithRedirect } from 'firebase/auth';
 
 const NavBar = () => {
   const [user] = userAuthState(auth);
   const googleSignin = () => {
     const provider = new GithubAuthProvider();
-    signInWithPopup(auth, provider);
+    signInWithRedirect(auth, provider);
   };
 
   const signOut = () => {
