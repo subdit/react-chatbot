@@ -32,8 +32,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4383ba;
-  color: #242443;
+  background-color: #c7c11f;
+  color: #2e373b;
   height: 60px;
   position: fixed;
   left: 0;
@@ -62,13 +62,23 @@ input {
 .welcome {
   padding: 30px;
   text-align: center;
-  align-items: center;
   margin-top: 40px;
-  color: #7cc5d9;
+  color: #2e373b;
+  background-color: rgb(221, 221, 213);
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
-  margin-top: 20px;
+  align-items: center;
+}
+.footer {
+  padding: 30px;
+  text-align: center;
+  margin-top: 0px;
+  color: #2e373b;
+  background-color: rgb(240, 240, 200);
+}
+.footer :is(h2, p, img) {
+  margin-bottom: 20px;
   align-items: center;
 }
 
