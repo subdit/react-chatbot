@@ -10,10 +10,12 @@ import Footer from './components/Footer';
 function App() {
   const [user] = useAuthState(auth);
   return (
-    <div>
+    <div className='App'>
       <NavBar />
       {!user ? <Welcome /> : <ChatBox />}
-      <Footer />
+      <div className='footer'>
+        <Footer />
+      </div>
     </div>
   );
 }

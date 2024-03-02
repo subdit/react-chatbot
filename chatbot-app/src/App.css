@@ -10,7 +10,7 @@ html,
 body {
   max-width: 100vw;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button,
@@ -21,7 +21,7 @@ input {
 .App {
   width: 100%;
   min-height: 100vh;
-  background-color: #1c2c4c;
+  background-color: #3e5685;
   color: #4c768d;
   padding-top: 60px;
 }
@@ -32,7 +32,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #c7c11f;
+  background-color: #4c768d;
   color: #2e373b;
   height: 60px;
   position: fixed;
@@ -63,19 +63,19 @@ input {
   padding: 30px;
   text-align: center;
   margin-top: 40px;
-  color: #2e373b;
-  background-color: rgb(221, 221, 213);
+  color: #7cc5d9;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
   align-items: center;
 }
 .footer {
+  display: center;
   padding: 30px;
   text-align: center;
-  margin-top: 0px;
-  color: #2e373b;
-  background-color: rgb(240, 240, 200);
+  margin-top: 4%;
+  color: #dbe9ee;
+  -moz-text-decoration-line: ;
 }
 .footer :is(h2, p, img) {
   margin-bottom: 20px;
