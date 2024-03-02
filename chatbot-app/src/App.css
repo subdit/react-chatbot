@@ -32,7 +32,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4c768d;
+  background-color: #4383ba;
   color: #242443;
   height: 60px;
   position: fixed;
@@ -62,11 +62,14 @@ input {
 .welcome {
   padding: 30px;
   text-align: center;
+  align-items: center;
   margin-top: 40px;
   color: #7cc5d9;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
 }
 
 /* chat component */

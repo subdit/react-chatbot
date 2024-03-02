@@ -2,12 +2,12 @@ import React from 'react';
 import GoogleSignin from '../img/btn_google_signin_dark_pressed_web.png';
 import { auth } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { GithubAuthProvider, signInWithRedirect } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
   const googleSignin = () => {
-    const provider = new GithubAuthProvider();
+    const provider = new GoogleAuthProvider();
     signInWithRedirect(auth, provider);
   };
 
@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <nav className='nav-bar'>
-      <h2>Chatbot </h2>
+      <h2>Chatbot App</h2>
       {user ? (
         <button onClick={signOut} className='sign-out' type='button'>
           Sign Out
