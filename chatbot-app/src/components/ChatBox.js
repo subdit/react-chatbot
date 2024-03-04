@@ -18,7 +18,7 @@ const ChatBox = () => {
   useEffect(() => {
     const q = query(
       collection(db, 'message'),
-      orderBy('createAt', 'desc'),
+      orderBy('createdAt', 'desc'),
       limit(50)
     );
     const unsubscribe = onSnapshot(q, QuerySnapshot => {
@@ -32,7 +32,7 @@ const ChatBox = () => {
       setMessages(sortedMessages);
     });
     return () => unsubscribe;
-  });
+  }, []);
   return (
     <main className='chat-box'>
       <div className='messages-wrapper'>

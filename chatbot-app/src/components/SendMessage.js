@@ -32,7 +32,7 @@ const SendMessage = ({ scroll }) => {
         name='messageInput'
         type='text'
         className='form-input__input'
-        placeholder='type message here'
+        placeholder='Enter Message here..'
         value={message}
         onChange={e => setMessage(e.target.value)}
       />
